@@ -51,6 +51,7 @@ namespace ConsoleApp4
             if (tabakList.Count == 0)
             {
                 Console.WriteLine("У меня закончился табак");
+                Thread.Sleep(3000);
                 return null;
             }
             tabak tabak1 = tabakList.FirstOrDefault();
@@ -64,6 +65,7 @@ namespace ConsoleApp4
             if (spichkiList.Count == 0)
             {
                 Console.WriteLine("У меня закончились спички");
+                Thread.Sleep(3000);
                 return null;
             }
             spichki spichki1 = spichkiList.FirstOrDefault();
@@ -77,6 +79,7 @@ namespace ConsoleApp4
             if (bumagaList.Count == 0)
             {
                 Console.WriteLine("У меня закончилась бумага");
+                Thread.Sleep(3000);
                 return null;
             }
             bumaga bumaga1 = bumagaList.FirstOrDefault();
