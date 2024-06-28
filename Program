@@ -12,11 +12,14 @@ namespace ConsoleApp4
         public static tabak? tabak;
         public static bumaga? bumaga;
         public static spichki? spichki;
+        private static smoker? smokerWithTabak;
+        private static smoker? smokerWithBumaga;
+        private static smoker? smokerWithSpichki;
         public static void Main()
         {
-            smoker smokerWithBumaga;
-            smoker smokerWithTabak;
-            smoker smokerWithSpichki;
+            smokerWithTabak = new("tabak");
+            smokerWithBumaga = new("bumaga");
+            smokerWithSpichki = new("spichki");
             while (true)
             {
                 tabak = null;
@@ -79,10 +82,8 @@ namespace ConsoleApp4
         }
         public static void SmokerWithTabak()
         {
-            smoker smokerWithTabak;
             if (bumaga != null & spichki != null)
             {
-                smokerWithTabak = new("tabak");
                 Cigarette abc;
                 abc = smokerWithTabak.makecigarete(bumaga, spichki);
                 if (abc == null)
@@ -98,10 +99,8 @@ namespace ConsoleApp4
         }
         private static void SmokerWithBumaga()
         {
-            smoker smokerWithBumaga;
             if (tabak != null & spichki != null)
             {
-                smokerWithBumaga = new("bumaga");
                 Cigarette abc;
                 abc = smokerWithBumaga.makecigarete(tabak, spichki);
                 if (abc == null)
@@ -117,10 +116,8 @@ namespace ConsoleApp4
         }
         private static void SmokerWithSpichki()
         {
-            smoker smokerWithSpichki;
             if (tabak != null & bumaga != null)
             {
-                smokerWithSpichki = new("spichki");
                 Cigarette abc;
                 abc = smokerWithSpichki.makecigarete(bumaga, tabak);
                 if (abc == null)
